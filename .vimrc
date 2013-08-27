@@ -15,19 +15,21 @@ set tabstop=8
 set sts=4
 set expandtab
 syntax on
-
+"
 " 현재 working directory로 cd
-" "set autochdir
+" set autochdir
 " :lc %:p:h 해도 됨
 "
-" "backspace 사용 가능
+" backspace 사용 가능
 set bs=indent,eol,start
+"
 " set paste, set nopaste를 Insert 키로
 " set pastetoggle=<Ins>
 "
-" " 대소문자 무시하고 찾기 /\cfoo 해도 foo를 무시하고 찾는다.
-" " 대문자 C로 해서 /\Cfoo 하면 대소문자 구분>해서 >찾음.
-"set ic  "set ignorecase
+" 대소문자 무시하고 찾기 /\cfoo 해도 foo를 무시하고 찾는다.
+" 대문자 C로 해서 /\Cfoo 하면 대소문자 구분>해서 >찾음.
+" set ic  
+" set ignorecase
 "
 highlight Comment term=bold cterm=bold ctermfg=4
 highlight Directory term=bold cterm=bold ctermfg=4
@@ -35,18 +37,23 @@ highlight Directory term=bold cterm=bold ctermfg=4
 set fencs=ucs-bom,utf-8,cp94,euc-kr.latin1
 colorschem desert
 
+"
 " 주석이 어두워서 잘 안 보일 때(2가지 방법)
 "   1: colorscheme torte
 "   2: hi Comment cterm=bold
 " 다시 어둡게 만드려면
 "   :hi Comment cterm=none
+"
+
 highlight Comment term=bold cterm=bold ctermfg=4
 highlight Directory term=bold cterm=bold ctermfg=4
 "
 " 주석컬러 원래대로
 " map <F10> :colorscheme default<CR>:hi LineNr ctermfg=DarkGray<CR>
 " 주석만 잘 밝게 하려면 :hi Comment ctermfg=blue
+"
 map <F10> :hi Comment ctermfg=blue<CR>
+"
 " 블록 폴딩 기능을 기록
 " set fdm=marker
 " 폴딩 기능 단축키
@@ -61,6 +68,7 @@ map <F10> :hi Comment ctermfg=blue<CR>
 "
 "
 " 파일을 열 때, 마지막 커서가 있었던 위치로 이동
+"
 if has("autocmd")
      autocmd BufReadPost *
          \ if line("'\"") > 0 && line ("'\"") <= line("$") |
