@@ -1,3 +1,5 @@
+LANG="ko_KR.UTF-8"
+
 alias tmux="TERM=screen-256color-bce tmux"
 export TERM="xterm-256color"
 
